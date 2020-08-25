@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
+
+
+
+
+<section layout:fragment="conteudo">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="clearfix">
+				<h1 class="panel-title aw-titulo-panel">Todos os Produtos</h1>
+
+			</div>
+		</div>
+
+		<div class="panel-body">
+			<div class="layout-produtos" th:each="produto : ${produtos}">
+				<article class="produto">
+					<span th:text = "${produto.nome}"></span>
+					<span th:text = "|R$ ${{produto.valor}}"></span>
+				</article>
+
+				<span th:if="${#lists.isEmpty(produtos)}"> Nenhum produto foi encontrado</span>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+</html>
