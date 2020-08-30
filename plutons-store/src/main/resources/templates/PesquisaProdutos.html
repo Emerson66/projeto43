@@ -3,34 +3,52 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="LayoutPadrao">
+<head>
+
+</head>
+<body>
+	<section layout:fragment="conteudo">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="clearfix">
+					<h1 class="panel-title aw-titulo-panel">Todos os Produtos</h1>
+
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<div  class="layout-produtos"
+					th:each="produto : ${produtos}">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3">
+
+								<article class="produto">
+									<div class="title-container layout-descricao">
+										<div class="produto__preco">
+											<span class="produto__preco__cifrao">R$</span>
+											<span class="produto__preco__real" th:text=" ${{produto.valor}}"></span>
+
+										</div>
+										<span title="Laranja Mecânica" aria-hidden="true"
+											class="produto__titulo" th:text="${produto.nome}"></span>
+
+									</div>
 
 
 
+								</article>
 
-<section layout:fragment="conteudo">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="clearfix">
-				<h1 class="panel-title aw-titulo-panel">Todos os Produtos</h1>
+								<span th:if="${#lists.isEmpty(produtos)}"> Nenhum produto
+									foi encontrado</span>
 
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-
-		<div class="panel-body">
-			<div class="layout-produtos" th:each="produto : ${produtos}">
-				<article class="produto">
-					<span th:text = "${produto.nome}"></span>
-					<span th:text = "|R$ ${{produto.valor}}"></span>
-				</article>
-
-				<span th:if="${#lists.isEmpty(produtos)}"> Nenhum produto foi encontrado</span>
-
-			</div>
-		</div>
-	</div>
-</section>
-
-
-
-
+	</section>
+</body>
 </html>
