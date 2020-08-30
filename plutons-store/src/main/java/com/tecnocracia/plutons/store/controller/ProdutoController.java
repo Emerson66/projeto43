@@ -45,6 +45,8 @@ public class ProdutoController {
 			return CADASTRO_VIEW;
 		}
 	}
+	
+	
 
 	@RequestMapping
 	public ModelAndView pesquisar() {
