@@ -1,0 +1,203 @@
+/*--------------------*\
+		NAVEGAÇÃO
+\*--------------------*/
+
+.navegacao{
+	
+	
+    
+   ;
+}
+
+.navegacao__menu{
+	float: right;
+}
+
+.navegacao h1{
+	
+	font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+/*--------------------*\
+  		  MENU
+\*--------------------*/
+
+.menu{
+	margin: 0;
+	font-size: 1.4rem;
+	list-style: none;
+}
+
+@media(max-width: 991px){
+
+	.menu{
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+
+		display: none;
+		width: 200px;
+		padding: 20px;
+		border-right: 1px solid #eee;
+
+		background-color: #fbfbfb;
+	}
+}
+
+.menu__item{
+	display: inline;
+
+	line-height: 3;
+	padding-left: 1.4rem; 
+
+	text-decoration:none;
+}
+.menu__logo {
+    max-width: 160px;
+  }
+  
+   @media (max-width: 800px) {
+    .menu__logo {
+      max-width: 105px;
+    }
+  }
+/*--------------------*\
+  CHAMADA
+\*--------------------*/
+
+.chamada img{
+	
+	font-size: 1,6rem;
+	text-align: center;
+	max-width: auto;
+	width: 100%
+	
+	
+}
+
+.chamada__titulo{
+	margin: 0;
+
+	color: #000;
+
+	font-size: 1.2em;
+}
+
+.chamada__subtitulo{
+	margin: 60px 0;
+
+	color: #000;
+
+	font-size: 1em;
+}
+
+
+.chamada__acao{
+	font-size:1em;
+}
+
+
+
+/*--------------------*\
+  produto
+\*--------------------*/
+
+.produto{
+	position: relative;
+	text-align: center;
+
+	padding: 0px;
+	padding-bottom: 20px;
+	padding-top: 0;	
+	margin-bottom: 4px 
+
+	border: 1px solid black;
+
+	font-size: 1.4rem;
+}
+
+.produto__titulo{
+	font-size: 1.7rem;
+	color: #111111;
+}
+
+.produto__preco{
+	height: 28px
+	line-height: 28px;
+	color: #111111;
+}
+.produto__preco__cifrao{
+	
+
+	font-size: 2.1rem;
+
+	font-family: "Amazon Ember", Arial, sans-serif;
+	
+}
+
+.produto__preco__real{
+	font-size: 2.1rem;
+
+	font-family: "Amazon Ember", Arial, sans-serif;
+	
+}
+
+.produto__preco__centavo{
+	position: relative;	
+	top: -0.5em;
+
+	font-size: 1.2rem;
+
+	font-family: "Amazon Ember", Arial, sans-serif;
+	
+
+}
+
+
+
+
+
+
+
+
+  
+  .Menu {
+    
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  body {
+    --bodyPaddingTop: ;
+    padding-top: 94px;
+  }
+  @media (max-width: 800px) {
+    .Menu {
+      height: 40px;
+      justify-content: center;
+    }
+    body {
+      --bodyPaddingTop: 40px;
+      padding-top: var(--bodyPaddingTop);
+    }
+  }
+  
+  .ButtonLink {
+    
+  }
+  
+  @media (max-width: 800px) {
+    a.ButtonLink {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--primary);
+      border-radius: 0;
+      border: 0;
+      text-align: center;
+    }
+  }
